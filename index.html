@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Report Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Medical Report Viewer</h1>
+
+<div class="container">
+
+    <div class="image-section">
+        <img id="imageDisplay">
+    </div>
+
+    <div class="text-section">
+
+        <h3>Generated Report</h3>
+        <p id="generated"></p>
+
+        <h3>Ground Truth Report</h3>
+        <p id="groundTruth"></p>
+
+    </div>
+
+</div>
+
+<div class="controls">
+    <button onclick="prev()">Previous</button>
+    <span id="counter"></span>
+    <button onclick="next()">Next</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
