@@ -27,6 +27,7 @@ function show() {
     });
 
     document.getElementById("generated").innerText = item.generated;
+    document.getElementById("gptgenerated").innerText = item.gptgenerated;
     document.getElementById("groundTruth").innerText = item.ground_truth;
 
     document.getElementById("counter").innerText =
