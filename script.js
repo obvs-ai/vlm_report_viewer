@@ -11,14 +11,23 @@ function show() {
 
     const item = data[index];
 
-    document.getElementById("imageDisplay").src =
-        "images/" + item.image;
+    const container = document.getElementById("imageContainer");
+    container.innerHTML = "";
 
-    document.getElementById("generated").innerText =
-        item.generated;
+    const images = item.image.split(";");
 
-    document.getElementById("groundTruth").innerText =
-        item.ground_truth;
+    images.forEach(img => {
+
+        const imageElement = document.createElement("img");
+        imageElement.src = "images/" + img.trim();
+        imageElement.className = "report-image";
+
+        container.appendChild(imageElement);
+
+    });
+
+    document.getElementById("generated").innerText = item.generated;
+    document.getElementById("groundTruth").innerText = item.ground_truth;
 
     document.getElementById("counter").innerText =
         (index + 1) + " / " + data.length;
