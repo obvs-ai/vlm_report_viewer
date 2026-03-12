@@ -28,6 +28,7 @@ function show() {
 
     document.getElementById("generated").innerText = item.generated;
     document.getElementById("gptgenerated").innerText = item.opengenerated;
+    document.getElementById("qwengenerated").innerText = item.qwengenerated;
     document.getElementById("groundTruth").innerText = item.ground_truth;
 
     document.getElementById("counter").innerText =
